@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+	h1 Todos os Clientes
+	hr
+	a(href="/clientes/create" class="btn btn-primary") Cadastrar Clientes
+	&nbsp;&nbsp;
+	a(href="/" class="btn btn-info") Voltar
+	hr
+
+	table(class="table well")
+		thead
+			th Id
+			th Nome
+			th Cidade
+			th Estado
+			th Data Cadastro
+			th &nbsp;
+		tbody
+			each valor, i in lista
+				tr
+					td #{valor._id}
+					td #{valor.nome}
+					td #{valor.cidade}
+					td #{valor.estado}
+					td #{valor.data_cad}
+					td 
+						a(href="/clientes/remove/#{valor._id}" class="btn btn-danger") Remover
+						&nbsp;
+						a(href="/clientes/edit/#{valor._id}" class="btn btn-info") Editar

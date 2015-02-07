@@ -1,0 +1,24 @@
+doctype
+html(lang="pt-BR")
+head
+	title= title
+	link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+	link(rel='stylesheet', href='/stylesheets/style.css')
+body
+	div(class="navbar navbar-inverse navbar-fixed-top")
+		div(class="container")
+			div(class="navbar-header")
+				a(href="/" class="navbar-brand") Sistema Nodejs
+			div(class="navbar-collapse collapse" id="navbar-main")
+				ul(class="nav navbar-nav")
+					li(class="dropdown")
+						a(href="/usuarios") Usuários
+					li
+						a(href="/clientes") Clientes
+					li
+						a(href="/contato") Contato
+	div(class="container")
+		block content
+	
+		footer
+			p Desenvolvido por zehjs

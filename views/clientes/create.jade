@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+	h1 Cadastrar Clientes
+	hr
+	a(href="/clientes/create" class="btn btn-primary") Cadastrar Clientes
+	&nbsp;&nbsp;
+	a(href="/" class="btn btn-info") Voltar
+	hr
+
+	form(method="POST", action="/clientes/insert", role="form")
+		div(class="form-group")
+			label Nome:
+			input(type="text", name="nome" class="form-control")
+		div(class="form-group")
+			label Estado:
+			input(type="text", name="estado" class="form-control")
+		div(class="form-group")
+			label Cidade:
+			input(type="text", name="cidade" class="form-control")
+
+		input(type="submit" class="btn btn-success", value="Cadastrar")

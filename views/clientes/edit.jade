@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+	h1 Alterar Clientes
+	hr
+	a(href="/" class="btn btn-info") Voltar
+	hr
+
+	form(method="POST", action="/clientes/update/#{value._id}", role="form")
+		div(class="form-group")
+			label Nome:
+			input(type="text" name="nome" class="form-control" value="#{value.nome}")
+		div(class="form-group")
+			label Estado:
+			input(type="text" name="estado" class="form-control" value="#{value.estado}")
+		div(class="form-group")
+			label Cidade:
+			input(type="text" name="cidade" class="form-control" value="#{value.cidade}")
+
+		input(type="submit" class="btn btn-success", value="Salvar")
