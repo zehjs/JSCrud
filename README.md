@@ -1,2 +1,4 @@
 # JSCrud
-Crud feito em JS
+Crud feito em JS.
+
+NodeJS / MongoDB / ExpressJS
